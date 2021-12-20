@@ -1,6 +1,6 @@
 # MuckMod
 
-# How To Install
+# How To Install 
 Download both Assembly-CSharp.dll and MuckCoreMod.dll 
 Copy them to "C:\Program Files (x86)\Steam\steamapps\common\Muck\Muck_Data\Managed" or your local install directory
 Replace if asked.

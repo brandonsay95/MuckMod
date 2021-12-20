@@ -138,13 +138,34 @@ namespace MuckCoreMod
         }
         private void Awake()
         {
+            versionText = ModInstance.Version;
             ModGameManager.OnNewDay += ModGameManager_OnNewDay;
             FurnaceSync.ProcessingMultiplier = () => 3;
-          //  ShrineRespawn.GetNameFunc = () => "Warp To Homie";
-            RespawnTotemUI.GetRevivePriceFunc = () => 10;
+            //  ShrineRespawn.GetNameFunc = () => "Warp To Homie";
+            //GameManager.CheckIfGameOverFuncOverride = (playersLeft) =>
+            //{
+            //    if (playersLeft > 0)
+            //    {
+            //        return true;
+            //    }
+            //    else
+            //    {
+            //        for (int i = 0; i < Server.clients.Count; i++)
+            //        {
+            //            if (GameManager.players[i].dead)
+            //                ClientSend.RevivePlayer(i, -1, true);
+            //        }
+            //        DayCycle.time = 0;
+            //        GameLoop.Instance.NewDay(GameLoop.Instance.currentDay + 2);
+            //        return true;
+
+            //    }
+            //};
+            
+          //  RespawnTotemUI.GetRevivePriceFunc = () => 10;
             //GameLoop.OnGameLoopStart = () => {
                 
-            //};
+            //};GameManager.CheckIfGameOverFuncOverride 
             HitableResource.HitResourceMultiplier  = () => 4;
             //RespawnTotemUI.RequestReviveFunc = (int playerId) => {
             //    Debug.LogError("trying");
