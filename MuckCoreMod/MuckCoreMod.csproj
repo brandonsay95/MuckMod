@@ -207,7 +207,7 @@
   </ItemGroup>
 
   <Target Name="PostBuild" AfterTargets="PostBuildEvent">
-    <Exec Command="copy &quot;C:\Applications\Github\ShatteredEyeStudios\MuckCoreMod\MuckCoreMod\bin\Debug\netstandard2.0\MuckCoreMod.dll&quot; &quot;C:\Program Files (x86)\Steam\steamapps\common\Muck\Mods\MuckCoreMod\MuckCoreMod.dll&quot;" />
+    <Exec Command="copy &quot;C:\Applications\Github\ShatteredEyeStudios\MuckCoreMod\MuckCoreMod\bin\Debug\netstandard2.0\MuckCoreMod.dll&quot; &quot;C:\Program Files (x86)\Steam\steamapps\common\Muck\Muck_Data\Managed\MuckCoreMod.dll&quot;" />
   </Target>
 
 </Project>

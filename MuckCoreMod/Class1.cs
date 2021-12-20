@@ -140,32 +140,32 @@ namespace MuckCoreMod
         {
             ModGameManager.OnNewDay += ModGameManager_OnNewDay;
             FurnaceSync.ProcessingMultiplier = () => 3;
-            ShrineRespawn.GetNameFunc = () => "Warp To Homie";
+          //  ShrineRespawn.GetNameFunc = () => "Warp To Homie";
             RespawnTotemUI.GetRevivePriceFunc = () => 10;
             //GameLoop.OnGameLoopStart = () => {
                 
             //};
             HitableResource.HitResourceMultiplier  = () => 4;
-            RespawnTotemUI.RequestReviveFunc = (int playerId) => {
-                Debug.LogError("trying");
-                if (InventoryUI.Instance.GetMoney() < 10)
-                {
-                    return true;
-                }
-                if (RespawnTotemUI.RequestReviveFunc != null && RespawnTotemUI.RequestReviveFunc(playerId))
-                {
-                    return true;
-                }
-                PlayerManager playerManager = GameManager.players[playerId];
-                if (playerManager == null || playerManager.disconnected || !playerManager.dead)
-                {
-                    return true;
-                }
-                Debug.LogError("sendinging revie");
-                GameManager.players[playerManager.id].transform.position = GameManager.players[playerId].transform.position;
-                ClientSend.PlayerPosition(GameManager.players[playerId].transform.position + (Vector3.up* 4));
-                return true;
-            };
+            //RespawnTotemUI.RequestReviveFunc = (int playerId) => {
+            //    Debug.LogError("trying");
+            //    if (InventoryUI.Instance.GetMoney() < 10)
+            //    {
+            //        return true;
+            //    }
+            //    if (RespawnTotemUI.RequestReviveFunc != null && RespawnTotemUI.RequestReviveFunc(playerId))
+            //    {
+            //        return true;
+            //    }
+            //    PlayerManager playerManager = GameManager.players[playerId];
+            //    if (playerManager == null || playerManager.disconnected || !playerManager.dead)
+            //    {
+            //        return true;
+            //    }
+            //    Debug.LogError("sendinging revie");
+            //    GameManager.players[playerManager.id].transform.position = GameManager.players[playerId].transform.position;
+            //    ClientSend.PlayerPosition(GameManager.players[playerId].transform.position + (Vector3.up* 4));
+            //    return true;
+            //};
             //GameLoop loop = Transform.FindObjectOfType<GameLoop>();
             //ModGameLoop modGameLoop = ModGameLoop.AttachToGameLoop(loop);
             //GameRegistry.SetType<GameLoop>(modGameLoop);
